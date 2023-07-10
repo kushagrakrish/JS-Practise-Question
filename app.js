@@ -165,10 +165,45 @@ console.log(number);
 
 // Everything is JS is primitive type or Object type
 
-// 58
+// 28
 
 console.log(!!null);
 console.log(!!"");
 console.log(!!1);
 
 // false false true initially null is considered false same as "" is also false initially
+// console.log(setInterval(() => console.log("first"), 1000));
+// console.log(setInterval(() => console.log("first"), 1000));
+// console.log(setInterval(() => console.log("first"), 1000));
+
+// Every set interval has a unique id ,first they will print that and then first will be priented
+
+// 29
+
+console.log([..."anil"]);
+
+// Basically the spread operator will spread the iterable items into individual items
+const w = [1, 3, 2];
+const u = [1, 3, 2];
+console.log(w == u);
+
+// Two arrays will always be unequal or false bc they have different memory location
+
+// 30
+let data = [1, 2, 3].map((num) => {
+  if (typeof num === "number") return;
+  return num * 2;
+});
+console.log(data);
+
+// Out for these three elements in array will become undefined
+// we arent returning anything
+
+// 31
+(() => {
+  let x = (y = 10);
+})();
+console.log(typeof y);
+// Here JS behaves like let x and y will be automatically be asigned by var y and var has global scope
+
+console.log(true + +"10");
