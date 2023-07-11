@@ -81,3 +81,16 @@ const maxRecord = characters?.map((character) => {
   };
 });
 console.log(maxRecord);
+
+// Some method in JS
+
+const oneMaleCharc = characters?.some((character) => {
+  return character.gender === "male";
+});
+console.log(oneMaleCharc);
+
+// One characr with atleast one blue eye
+const oneVlueEye = characters?.some((character) => {
+  return character.eye_color === "blue";
+});
+console.log(oneVlueEye);
