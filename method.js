@@ -50,3 +50,34 @@ const allMaleCharacter = characters?.filter((character) => {
   return character.gender === "male";
 });
 console.log(allMaleCharacter);
+
+// Map Method
+
+// Generally, the map() method is used to iterate over an array and calling function on every element of the array.
+// Map methods accepts two value as params which is a current value and a index and returns a new array
+
+// Get array of all name
+const allName = characters?.map((character) => {
+  return character.name;
+});
+console.log(allName);
+
+// Get Array of objects with just name and hegiht
+const minifiedRecord = characters?.map((character) => {
+  return { name: character.name, height: character.height };
+});
+console.log(minifiedRecord);
+
+// Get first name in array
+const firstName = characters?.map((character) => {
+  return character.name.split(" ")[0];
+});
+console.log(firstName);
+
+const maxRecord = characters?.map((character) => {
+  return {
+    gender: character.gender,
+    eye_color: character.eye_color,
+  };
+});
+console.log(maxRecord);
