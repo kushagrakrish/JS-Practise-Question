@@ -207,3 +207,36 @@ console.log(typeof y);
 // Here JS behaves like let x and y will be automatically be asigned by var y and var has global scope
 
 console.log(true + +"10");
+
+//
+
+let names = ["Kush", "Ram", "Shyam", "ramesh"];
+
+// Splice Methods adds or remove elements from array and overwrites the OG array
+// Splice method accepts three params
+// 1.Index where you want to add
+// 2.Index which you want to delte
+// 3. 'asdasd' anything you wish to add
+
+// let newNames = names.splice(2, 0, "Mahesh Dalle");
+// console.log(names);
+
+// If you want to add the name in the last so
+let newNames = names.splice(names.length, 0, "Anshu");
+console.log(names);
+
+// Convert ram to all caps RAM
+newNames = names.splice(1, 1, "RAM");
+console.log(names);
+console.log(newNames);
+
+// want to delte only shayam
+// So to delte any specific array given the index of that arraya and then 1 which deicdes it will delete only that elemt
+console.log(names);
+const deleteName = names.splice(2, 1);
+console.log(names);
+
+let newNainyName = names.splice(names.length, 0, "nainus");
+console.log(names);
+let delelteYou = names.splice(3, 1);
+console.log(names);
