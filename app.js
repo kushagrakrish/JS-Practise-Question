@@ -240,3 +240,10 @@ let newNainyName = names.splice(names.length, 0, "nainus");
 console.log(names);
 let delelteYou = names.splice(3, 1);
 console.log(names);
+
+const naming = ["Kushagra", "Anshu", "Nainy", "Kushagra", "Anshu", "Nainy"];
+
+function removeName(naming) {
+  return naming?.filter((name, index) => naming.indexOf(name) === index);
+}
+console.log(removeName(naming));
