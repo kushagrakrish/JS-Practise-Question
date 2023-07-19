@@ -137,3 +137,108 @@ function removeDuplication(arr) {
   return arr.filter((item, index) => arr.indexOf(item) === index);
 }
 console.log(removeDuplication(arr));
+
+// Map
+const nums = [1, 2, 3, 4, 5];
+
+const moreThanTwo = nums?.filter((item) => {
+  return item > 2;
+});
+
+console.log(moreThanTwo);
+
+// Reduce method to add all the elements in an array
+const sumOfAllNum = nums?.reduce((acc, curr) => {
+  return acc + curr;
+}, 0);
+
+console.log(sumOfAllNum);
+
+// Que difference between map and for Each
+
+const mapResult = arr.map((item) => {
+  return item + 2;
+});
+console.log(mapResult);
+
+const forEachResult = arr.forEach((item) => {
+  return item + 2;
+});
+console.log(forEachResult);
+
+const students = [
+  {
+    name: "John Doe",
+    rollNumber: "ABC123",
+    marks: 60,
+  },
+  {
+    name: "Jane Smith",
+    rollNumber: "XYZ456",
+    marks: 55,
+  },
+  {
+    name: "Michael Johnson",
+    rollNumber: "LMN789",
+    marks: 40,
+  },
+  {
+    name: "Emily Williams",
+    rollNumber: "PQR234",
+    marks: 95,
+  },
+  {
+    name: "David Lee",
+    rollNumber: "DEF567",
+    marks: 70,
+  },
+];
+
+const upperCaseNames = students?.map((student) => {
+  return student.name.toUpperCase();
+});
+
+console.log(upperCaseNames);
+
+// Student who scored more than 60 marks
+const greaterMaarksBy60 = students?.filter((student) => {
+  return student.marks > 60;
+});
+console.log(greaterMaarksBy60);
+
+// Calculate sum of marks of all students
+const totalMarks = students.reduce((acc, curr) => {
+  return acc + curr.marks;
+}, 0);
+
+console.log(totalMarks);
+
+// Return only names of students who scored more than less than 60
+
+const lessThan60 = students
+  .filter((student) => {
+    return student.marks > 60;
+  })
+  .map((student) => {
+    return student.name;
+  });
+
+console.log(lessThan60);
+
+// Return total marks for students with marks less than 60 after 20 marks added to student who scored less than 60
+
+const sumMarks = students
+  ?.map((student) => {
+    if (student.marks < 60) {
+      student.marks += 20;
+    }
+    return student;
+  })
+  .filter((student) => {
+    return student.marks > 60;
+  })
+  .reduce((acc, curr) => {
+    return acc + curr.marks;
+  }, 0);
+
+console.log(sumMarks);
