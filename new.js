@@ -70,3 +70,13 @@ let y = 22;
 // swap x to y
 [x, y] = [y, x];
 console.log(x, y);
+
+function reverseSentence(sentence) {
+  const words = sentence.split(" ");
+  const reverse = words.map((word) => {
+    return word.split("").reverse().join();
+  });
+  return reverse;
+}
+
+// useReducer provides more complex logic than useState. It allows you to handle multiple actions within a single function rather than writing separate functions for each action with useState. This makes it ideal for larger applications with greater complexity when managing state changes across components.
