@@ -57,3 +57,5 @@ function sum(param1, param2) {
 console.log(sum(2, 3));
 
 // First class function
+
+// Callback function in JS
