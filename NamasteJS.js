@@ -59,3 +59,4 @@ console.log(sum(2, 3));
 // First class function
 
 // Callback function in JS
+// Continue from tommaro
