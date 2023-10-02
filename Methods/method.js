@@ -37,6 +37,15 @@ const characters = [
   },
 ];
 
+const names = ["zakir", "alex", "Manish"];
+
+const reverseName = names.sort((a, b) => {
+  if (a < b) return 1;
+  else return -1;
+});
+
+console.log(reverseName);
+
 // Filter Methods
 const greaterMass100 = characters?.filter((character) => {
   return character.mass > 150;
@@ -45,16 +54,24 @@ console.log(greaterMass100);
 
 // JS filter array methods returns a new array from the existing array and the returned array should consist only those elements which satisfy the given condition set by argument
 
+
 // Get all male charac
 const allMaleCharacter = characters?.filter((character) => {
   return character.gender === "male";
 });
 console.log(allMaleCharacter);
 
+const height = characters?.filter((character) => {
+  return character.height > 140;
+});
+
+console.log(height);
+
 // Map Method
 
 // Generally, the map() method is used to iterate over an array and calling function on every element of the array.
 // Map methods accepts two value as params which is a current value and a index and returns a new array
+
 
 // Get array of all name
 const allName = characters?.map((character) => {
@@ -67,6 +84,15 @@ const minifiedRecord = characters?.map((character) => {
   return { name: character.name, height: character.height };
 });
 console.log(minifiedRecord);
+
+const nameMass = characters?.map((character) => {
+  return {
+    name: character.name,
+    mass: character.mass,
+  };
+});
+
+console.log(nameMass);
 
 // Get first name in array
 const firstName = characters?.map((character) => {
@@ -194,6 +220,12 @@ const students = [
   },
 ];
 
+const totalMarksStud = students.reduce((acc, curr) => {
+  return acc + curr.marks;
+}, 0);
+
+console.log(totalMarksStud);
+
 const upperCaseNames = students?.map((student) => {
   return student.name.toUpperCase();
 });
@@ -225,6 +257,15 @@ const lessThan60 = students
 
 console.log(lessThan60);
 
+const lessMark60 = students
+  .filter((student) => {
+    return student.marks > 60;
+  })
+  .map((student) => {
+    return student.name;
+  });
+
+console.log(lessThan60);
 // Return total marks for students with marks less than 60 after 20 marks added to student who scored less than 60
 
 const sumMarks = students
@@ -242,3 +283,15 @@ const sumMarks = students
   }, 0);
 
 console.log(sumMarks);
+
+const array = ["25", "55", "66"];
+
+const sumArray = array.map((str) => {
+  const digits = str.split("");
+  const digitSum = digits.reduce((acc, digit) => acc + parseInt(digit), 0);
+  return String(digitSum); // Convert the digit sum to a string
+});
+
+console.log(sumArray);
+
+

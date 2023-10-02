@@ -33,6 +33,16 @@ function reverseWords(sentence) {
 
 console.log(reverseWords("My Name is Kushagra"));
 
+function reverseName(sentence) {
+  const words = sentence.split(" ");
+  const reverseName = words.map((word) => {
+    return word.split("").reverse().join();
+  });
+  return reverseName;
+}
+
+console.log(reverseName("MY Name is anshu"));
+
 const slicedArray = arr.slice(1, 3);
 console.log(slicedArray);
 
@@ -80,3 +90,10 @@ function reverseSentence(sentence) {
 }
 
 // useReducer provides more complex logic than useState. It allows you to handle multiple actions within a single function rather than writing separate functions for each action with useState. This makes it ideal for larger applications with greater complexity when managing state changes across components.
+
+let webDvlop = ["HTML", "CSS", "JS", "Bootstrap"];
+
+//add React and taiwlind after removing js and bootstrap
+
+webDvlop.splice(2,2)
+console.log(webDvlop);

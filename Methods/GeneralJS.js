@@ -9,4 +9,7 @@ const helloWorld = () => {
     console.log("first");
   }, 2000);
 };
+
 helloWorld();
+
+
